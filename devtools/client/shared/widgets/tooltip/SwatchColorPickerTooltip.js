@@ -40,7 +40,7 @@ function SwatchColorPickerTooltip(document,
   let stylesheet = NEW_COLOR_WIDGET ?
     "chrome://devtools/content/shared/widgets/color-widget.css" :
     "chrome://devtools/content/shared/widgets/spectrum.css";
-  SwatchBasedEditorTooltip.call(this, document, stylesheet);
+  SwatchBasedEditorTooltip.call(this, document, stylesheet, NEW_COLOR_WIDGET);
 
   this.inspector = inspector;
 

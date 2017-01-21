@@ -71,6 +71,7 @@ TooltipsOverlay.prototype = {
     }
 
     let { toolbox } = this.view.inspector;
+    let panelDoc = this.view.inspector.panelDoc;
 
     // Initializing the different tooltips that are used in the inspector.
     // These tooltips are attached to the toolbox document if they require a popup panel.
@@ -88,7 +89,7 @@ TooltipsOverlay.prototype = {
 
     if (this.isRuleView) {
       // Color picker tooltip
-      this.colorPicker = new SwatchColorPickerTooltip(toolbox.doc,
+      this.colorPicker = new SwatchColorPickerTooltip(panelDoc,
                                                       this.view.inspector,
                                                       this._cssProperties);
       // Cubic bezier tooltip
